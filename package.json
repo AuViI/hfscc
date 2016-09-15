@@ -1,0 +1,19 @@
+{
+  "name": "hfscc",
+  "version": "1.0.0",
+  "description": "Take Screencaps of forecasts",
+  "main": "index.js",
+  "scripts": {
+    "run": " node_modules/.bin/electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "author": "mtib",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.4.0"
+  }
+}
