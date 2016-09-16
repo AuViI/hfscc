@@ -1,6 +1,7 @@
 const electron = require("electron")
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
+const shell = electron.shell
 const fs = require("fs")
 let win = null
 
@@ -18,8 +19,12 @@ app.on("ready", () => {
     } catch(e) {
       // folder exists
     }
-    fs.writeFile("pics/cap_"+locale+".png", pic.toPNG())
-    setTimeout(()=>{win.close()}, 1000)
+    let fullPath = __dirname+"/pics/cap_"+locale+".png"
+    fs.writeFile(fullPath, pic.toPNG())
+    setTimeout(()=>{
+      win.close()
+      shell.showItemInFolder(fullPath)
+    }, 1000)
   })}, 5000)
 })
 
