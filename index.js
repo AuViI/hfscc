@@ -19,7 +19,7 @@ app.on("ready", () => {
     } catch(e) {
       // folder exists
     }
-    let fullPath = __dirname+"/pics/cap_"+locale+".png"
+    let fullPath = "./pics/cap_"+locale+".png"
     fs.writeFile(fullPath, pic.toPNG())
     setTimeout(()=>{
       win.close()
