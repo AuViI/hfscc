@@ -23,7 +23,7 @@ app.on("ready", () => {
     fs.writeFile(fullPath, pic.toPNG())
     setTimeout(()=>{
       win.close()
-      shell.showItemInFolder(fullPath)
+      // shell.showItemInFolder(fullPath)
     }, 1000)
   })}, 5000)
 })
